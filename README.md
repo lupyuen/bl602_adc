@@ -42,3 +42,7 @@ make menuconfig
 ```
 
 In menuconfig, enable the BL602 ADC Library under "Library Routines".
+
+Based on the ADC Standard Driver from BL602 MCU SDK:
+
+https://github.com/bouffalolab/bl_mcu_sdk/blob/master/drivers/bl602_driver/std_drv
