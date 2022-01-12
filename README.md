@@ -43,6 +43,10 @@ make menuconfig
 
 In menuconfig, enable the BL602 ADC Library under "Library Routines".
 
+To test the BL602 ADC Library, run this NuttX App...
+
+-   [lupyuen/bl602_adc_test](https://github.com/lupyuen/bl602_adc_test)
+
 Based on the ADC Standard Driver from BL602 MCU SDK:
 
 https://github.com/bouffalolab/bl_mcu_sdk/blob/master/drivers/bl602_driver/std_drv
