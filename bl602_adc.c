@@ -37,6 +37,14 @@
 #include "bl602_adc.h"
 #include "bl602_ef_ctrl.h"
 
+#ifdef __NuttX__
+#define BFLB_USE_HAL_DRIVER 1
+
+void BL602_Delay_US(uint32_t cnt) {
+    usleep(cnt);
+}
+#endif  //  __NuttX__
+
 /** @addtogroup  BL602_Peripheral_Driver
  *  @{
  */
