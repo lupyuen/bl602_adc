@@ -246,6 +246,6 @@ typedef enum {
   * @}
   */
 #include <stdint.h>
-#include <system_bl602.h>
+////TODO: #include <system_bl602.h>
 
 #endif

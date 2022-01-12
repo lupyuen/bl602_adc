@@ -29,8 +29,8 @@
 #include <stdarg.h>
 #include <stdbool.h>
 #include <stdlib.h>
-#include "compiler/gcc.h"
-#include "compiler/common.h"
+////TODO: #include "compiler/gcc.h"
+////TODO: #include "compiler/common.h"
 
 #ifdef BIT
 #undef BIT
