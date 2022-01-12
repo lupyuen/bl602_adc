@@ -36,9 +36,9 @@
 #ifndef __BL602_HBN_H__
 #define __BL602_HBN_H__
 
-#include "hbn_reg.h"
-#include "bl602_aon.h"
-#include "bl602_sflash.h"
+////TODO: #include "hbn_reg.h"
+////TODO: #include "bl602_aon.h"
+////TODO: #include "bl602_sflash.h"
 #include "bl602_common.h"
 
 /** @addtogroup  BL602_Peripheral_Driver
@@ -401,6 +401,7 @@ typedef struct
 
 /*@} end of group HBN_Public_Macros */
 
+#ifdef TODO
 /** @defgroup  HBN_Public_Functions
  *  @{
  */
@@ -491,6 +492,7 @@ BL_Err_Type HBN_Set_Embedded_Flash_Pullup(uint8_t enable);
 BL_Err_Type HBN_Set_BOR_Cfg(HBN_BOR_CFG_Type *cfg);
 
 /*@} end of group HBN_Public_Functions */
+#endif  //  TODO
 
 /*@} end of group HBN */
 

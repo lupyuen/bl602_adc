@@ -37,15 +37,15 @@
 #define __BL602_GLB_H__
 
 #include "glb_reg.h"
-#include "pds_reg.h"
-#include "bl602_gpio.h"
-#include "bl602_l1c.h"
-#include "bl602_hbn.h"
-#include "bl602_sf_ctrl.h"
-#include "bl602_sf_cfg.h"
-#include "bl602_aon.h"
-#include "bl602_ef_ctrl.h"
-#include "bl602_pds.h"
+////TODO: #include "pds_reg.h"
+////TODO: #include "bl602_gpio.h"
+////TODO: #include "bl602_l1c.h"
+////TODO: #include "bl602_hbn.h"
+////TODO: #include "bl602_sf_ctrl.h"
+////TODO: #include "bl602_sf_cfg.h"
+////TODO: #include "bl602_aon.h"
+////TODO: #include "bl602_ef_ctrl.h"
+////TODO: #include "bl602_pds.h"
 #include "bl602_common.h"
 
 /** @addtogroup  BL602_Peripheral_Driver
@@ -549,6 +549,7 @@ typedef struct
 
 /*@} end of group GLB_Public_Macros */
 
+#ifdef TODO
 /** @defgroup  GLB_Public_Functions
  *  @{
  */
@@ -659,6 +660,7 @@ BL_Err_Type GLB_GPIO_INT0_IRQHandler_Install(void);
 BL_Err_Type GLB_GPIO_INT0_Callback_Install(GLB_GPIO_Type gpioPin, intCallback_Type *cbFun);
 
 /*@} end of group GLB_Public_Functions */
+#endif  //  TODO
 
 /*@} end of group GLB */
 
