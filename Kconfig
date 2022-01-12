@@ -3,25 +3,25 @@
 # see the file kconfig-language.txt in the NuttX tools repository.
 #
 
-menuconfig LIBSX1262
-	bool "Semtech SX1262 Library"
+menuconfig LIBBL602_ADC
+	bool "Semtech BL602_ADC Library"
 	default n
 	---help---
-		Enable build for Semtech SX1262 functions
+		Enable build for Semtech BL602_ADC functions
 
-if LIBSX1262
+if LIBBL602_ADC
 
-config LIBSX1262_DEBUG
-	bool "Libsx1262 debugging"
+config LIBBL602_ADC_DEBUG
+	bool "Libbl602_adc debugging"
 	default n
 	---help---
-		Enable debugging for libsx1262
+		Enable debugging for libbl602_adc
 
-config LIBSX1262_PRECISION
-	int "Libsx1262 precision [0/1/2]"
+config LIBBL602_ADC_PRECISION
+	int "Libbl602_adc precision [0/1/2]"
 	default 0
 
-config LIBSX1262_FOC_VABC
-	bool "Libsx1262 FOC includes voltage abc frame"
+config LIBBL602_ADC_FOC_VABC
+	bool "Libbl602_adc FOC includes voltage abc frame"
 
-endif # LIBSX1262
+endif # LIBBL602_ADC
