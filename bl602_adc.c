@@ -105,7 +105,6 @@ static ADC_Gain_Coeff_Type adcGainCoeffCal = {
  *  @{
  */
 
-#ifdef TODO
 /****************************************************************************/ /**
  * @brief  Software reset the whole ADC
  *
@@ -124,9 +123,7 @@ void ADC_Reset(void)
     AON_CLK_SET_DUMMY_WAIT;
     BL_WR_REG(AON_BASE, AON_GPADC_REG_CMD, BL_CLR_REG_BIT(regCmd, AON_GPADC_SOFT_RST));
 }
-#endif  //  TODO
 
-#ifdef TODO
 /****************************************************************************/ /**
  * @brief  ADC glable enable
  *
@@ -143,9 +140,7 @@ void ADC_Enable(void)
     tmpVal = BL_SET_REG_BIT(tmpVal, AON_GPADC_GLOBAL_EN);
     BL_WR_REG(AON_BASE, AON_GPADC_REG_CMD, tmpVal);
 }
-#endif  //  TODO
 
-#ifdef TODO
 /****************************************************************************/ /**
  * @brief  ADC glable disable
  *
@@ -162,9 +157,7 @@ void ADC_Disable(void)
     tmpVal = BL_CLR_REG_BIT(tmpVal, AON_GPADC_GLOBAL_EN);
     BL_WR_REG(AON_BASE, AON_GPADC_REG_CMD, tmpVal);
 }
-#endif  //  TODO
 
-#ifdef TODO
 /****************************************************************************/ /**
  * @brief  ADC normal mode init
  *
@@ -247,9 +240,7 @@ void ADC_Init(ADC_CFG_Type *cfg)
 
     ADC_Gain_Trim();
 }
-#endif  //  TODO
 
-#ifdef TODO
 /****************************************************************************/ /**
  * @brief  ADC normal mode channel config
  *
@@ -280,9 +271,7 @@ void ADC_Channel_Config(ADC_Chan_Type posCh, ADC_Chan_Type negCh, BL_Fun_Type co
     regCfg1 = BL_CLR_REG_BIT(regCfg1, AON_GPADC_SCAN_EN);
     BL_WR_REG(AON_BASE, AON_GPADC_REG_CONFIG1, regCfg1);
 }
-#endif  //  TODO
 
-#ifdef TODO
 /****************************************************************************/ /**
  * @brief  ADC scan mode channel config
  *
@@ -356,9 +345,7 @@ void ADC_Scan_Channel_Config(ADC_Chan_Type posChList[], ADC_Chan_Type negChList[
     tmpVal = BL_SET_REG_BIT(tmpVal, AON_GPADC_SCAN_EN);
     BL_WR_REG(AON_BASE, AON_GPADC_REG_CONFIG1, tmpVal);
 }
-#endif  //  TODO
 
-#ifdef TODO
 /****************************************************************************/ /**
  * @brief  ADC normal mode convert start
  *
@@ -383,9 +370,7 @@ void ADC_Start(void)
     regCmd = BL_SET_REG_BIT(regCmd, AON_GPADC_CONV_START);
     BL_WR_REG(AON_BASE, AON_GPADC_REG_CMD, regCmd);
 }
-#endif  //  TODO
 
-#ifdef TODO
 /****************************************************************************/ /**
  * @brief  ADC normal mode convert stop
  *
@@ -403,9 +388,7 @@ void ADC_Stop(void)
     regCmd = BL_CLR_REG_BIT(regCmd, AON_GPADC_CONV_START);
     BL_WR_REG(AON_BASE, AON_GPADC_REG_CMD, regCmd);
 }
-#endif  //  TODO
 
-#ifdef TODO
 /****************************************************************************/ /**
  * @brief  ADC FIFO configuration
  *
@@ -439,9 +422,7 @@ void ADC_FIFO_Cfg(ADC_FIFO_Cfg_Type *fifoCfg)
     tmpVal = BL_SET_REG_BIT(tmpVal, GPIP_GPADC_FIFO_CLR);
     BL_WR_REG(GPIP_BASE, GPIP_GPADC_CONFIG, tmpVal);
 }
-#endif  //  TODO
 
-#ifdef TODO
 /****************************************************************************/ /**
  * @brief  ADC get DMA FIFO data count
  *
@@ -458,9 +439,7 @@ uint8_t ADC_Get_FIFO_Count(void)
 
     return BL_GET_REG_BITS_VAL(tmpVal, GPIP_GPADC_FIFO_DATA_COUNT);
 }
-#endif  //  TODO
 
-#ifdef TODO
 /****************************************************************************/ /**
  * @brief  ADC get DMA FIFO full status
  *
@@ -481,9 +460,7 @@ BL_Sts_Type ADC_FIFO_Is_Full(void)
         return RESET;
     }
 }
-#endif  //  TODO
 
-#ifdef TODO
 /****************************************************************************/ /**
  * @brief  ADC get DMA FIFO empty status
  *
@@ -504,9 +481,7 @@ BL_Sts_Type ADC_FIFO_Is_Empty(void)
         return SET;
     }
 }
-#endif  //  TODO
 
-#ifdef TODO
 /****************************************************************************/ /**
  * @brief  ADC read DMA FIFO data
  *
@@ -523,9 +498,7 @@ uint32_t ADC_Read_FIFO(void)
 
     return (tmpVal);
 }
-#endif  //  TODO
 
-#ifdef TODO
 /****************************************************************************/ /**
  * @brief  ADC parse result
  *
@@ -605,9 +578,7 @@ void ADC_Parse_Result(uint32_t *orgVal, uint32_t len, ADC_Result_Type *result)
         }
     }
 }
-#endif  //  TODO
 
-#ifdef TODO
 /****************************************************************************/ /**
  * @brief  ADC mask or unmask certain or all interrupt
  *
@@ -729,9 +700,7 @@ void ADC_IntMask(ADC_INT_Type intType, BL_Mask_Type intMask)
             break;
     }
 }
-#endif  //  TODO
 
-#ifdef TODO
 /****************************************************************************/ /**
  * @brief  ADC clear certain or all interrupt
  *
@@ -863,9 +832,7 @@ void ADC_IntClr(ADC_INT_Type intType)
             break;
     }
 }
-#endif  //  TODO
 
-#ifdef TODO
 /****************************************************************************/ /**
  * @brief  ADC get interrupt status
  *
@@ -917,9 +884,7 @@ BL_Sts_Type ADC_GetIntStatus(ADC_INT_Type intType)
 
     return bitStatus;
 }
-#endif  //  TODO
 
-#ifdef TODO
 /****************************************************************************/ /**
  * @brief  ADC install interrupt callback
  *
@@ -936,9 +901,7 @@ void ADC_Int_Callback_Install(ADC_INT_Type intType, intCallback_Type *cbFun)
 
     adcIntCbfArra[intType] = cbFun;
 }
-#endif  //  TODO
 
-#ifdef TODO
 /****************************************************************************/ /**
  * @brief  ADC DMA interrupt handler
  *
@@ -991,9 +954,7 @@ void GPADC_DMA_IRQHandler(void)
     }
 }
 #endif
-#endif  //  TODO
 
-#ifdef TODO
 /****************************************************************************/ /**
  * @brief  ADC VBAT enable
  *
@@ -1010,9 +971,7 @@ void ADC_Vbat_Enable(void)
     tmpVal = BL_SET_REG_BIT(tmpVal, AON_GPADC_VBAT_EN);
     BL_WR_REG(AON_BASE, AON_GPADC_REG_CONFIG2, tmpVal);
 }
-#endif  //  TODO
 
-#ifdef TODO
 /****************************************************************************/ /**
  * @brief  ADC VBAT disable
  *
@@ -1029,7 +988,6 @@ void ADC_Vbat_Disable(void)
     tmpVal = BL_CLR_REG_BIT(tmpVal, AON_GPADC_VBAT_EN);
     BL_WR_REG(AON_BASE, AON_GPADC_REG_CONFIG2, tmpVal);
 }
-#endif  //  TODO
 
 /****************************************************************************/ /**
  * @brief  ADC TSEN Config
@@ -1328,7 +1286,6 @@ float TSEN_Get_Temp(uint32_t tsen_offset)
     return temp;
 }
 
-#ifdef TODO
 /****************************************************************************/ /**
  * @brief  ADC MIC Config
  *
@@ -1373,9 +1330,7 @@ BL_Err_Type ADC_Mic_Init(ADC_MIC_Type *adc_mic_config)
 
     return SUCCESS;
 }
-#endif  //  TODO
 
-#ifdef TODO
 /****************************************************************************/ /**
  * @brief  ADC MIC bias control
  *
@@ -1392,9 +1347,7 @@ void ADC_MIC_Bias_Enable(void)
     tmpVal = BL_SET_REG_BIT(tmpVal, AON_GPADC_MICBIAS_EN);
     BL_WR_REG(AON_BASE, AON_GPADC_REG_CMD, tmpVal);
 }
-#endif  //  TODO
 
-#ifdef TODO
 /****************************************************************************/ /**
  * @brief  ADC MIC bias control
  *
@@ -1411,9 +1364,7 @@ void ADC_MIC_Bias_Disable(void)
     tmpVal = BL_CLR_REG_BIT(tmpVal, AON_GPADC_MICBIAS_EN);
     BL_WR_REG(AON_BASE, AON_GPADC_REG_CMD, tmpVal);
 }
-#endif  //  TODO
 
-#ifdef TODO
 /****************************************************************************/ /**
  * @brief  Trim ADC Gain
  *
@@ -1453,7 +1404,6 @@ BL_Err_Type ATTR_CLOCK_SECTION ADC_Gain_Trim(void)
 
     return BL_ERROR;
 }
-#endif  //  TODO
 
 /*@} end of group ADC_Public_Functions */
 
