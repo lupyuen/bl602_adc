@@ -30,7 +30,7 @@
 #include <stdbool.h>
 #include <stdlib.h>
 ////TODO: #include "compiler/gcc.h"
-////TODO: #include "compiler/common.h"
+#include "common.h"
 
 #ifdef BIT
 #undef BIT
