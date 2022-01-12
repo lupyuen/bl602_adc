@@ -29,7 +29,7 @@
 #include <stdarg.h>
 #include <stdbool.h>
 #include <stdlib.h>
-////TODO: #include "compiler/gcc.h"
+#include "gcc.h"
 #include "common.h"
 
 #ifdef BIT
