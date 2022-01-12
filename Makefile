@@ -22,6 +22,7 @@ include $(TOPDIR)/Make.defs
 
 ifeq ($(CONFIG_LIBBL602_ADC),y)
 CSRCS += bl602_adc.c
+CSRCS += bl602_glb.c
 endif
 
 AOBJS = $(ASRCS:.S=$(OBJEXT))
