@@ -1228,7 +1228,7 @@ BL_Err_Type ATTR_CLOCK_SECTION ADC_Trim_TSEN(uint16_t *tsen_offset)
         }
     }
 
-    return ERROR;
+    return BL_ERROR;
 }
 
 /****************************************************************************/ /**
@@ -1362,7 +1362,7 @@ BL_Err_Type ADC_Mic_Init(ADC_MIC_Type *adc_mic_config)
 
     if (BL_IS_REG_BIT_SET(tmpVal2, AON_GPADC_PGA_EN) && adc_mic_config->micPgaEn == ENABLE) {
         /* 0x4000F914[13] and 0x4000F90c[15] Cannot be both Enable*/
-        return ERROR;
+        return BL_ERROR;
     } else {
         tmpVal1 = BL_SET_REG_BITS_VAL(tmpVal1, AON_GPADC_MICPGA_EN, adc_mic_config->micPgaEn);
     }
@@ -1451,7 +1451,7 @@ BL_Err_Type ATTR_CLOCK_SECTION ADC_Gain_Trim(void)
         }
     }
 
-    return ERROR;
+    return BL_ERROR;
 }
 #endif  //  TODO
 

@@ -51,7 +51,7 @@
  */
 typedef enum {
     SUCCESS = 0,
-    ERROR = 1,
+    BL_ERROR = 1,
     TIMEOUT = 2,
     INVALID = 3, /* invalid arguments */
     NORESC = 4   /* no resource or resource temperary unavailable */
