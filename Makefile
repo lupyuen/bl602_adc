@@ -21,10 +21,7 @@
 include $(TOPDIR)/Make.defs
 
 ifeq ($(CONFIG_LIBBL602_ADC),y)
-CSRCS += src/radio.c
-CSRCS += src/sx126x.c
-CSRCS += src/sx126x-nuttx.c
-CSRCS += lib_misc.c
+CSRCS += bl602_adc.c
 endif
 
 AOBJS = $(ASRCS:.S=$(OBJEXT))

@@ -4,24 +4,17 @@
 #
 
 menuconfig LIBBL602_ADC
-	bool "Semtech BL602_ADC Library"
+	bool "BL602 ADC Library"
 	default n
 	---help---
-		Enable build for Semtech BL602_ADC functions
+		Enable build for BL602 ADC Library
 
 if LIBBL602_ADC
 
 config LIBBL602_ADC_DEBUG
-	bool "Libbl602_adc debugging"
+	bool "BL602 ADC debugging"
 	default n
 	---help---
-		Enable debugging for libbl602_adc
-
-config LIBBL602_ADC_PRECISION
-	int "Libbl602_adc precision [0/1/2]"
-	default 0
-
-config LIBBL602_ADC_FOC_VABC
-	bool "Libbl602_adc FOC includes voltage abc frame"
+		Enable debugging for BL602 ADC Library
 
 endif # LIBBL602_ADC
