@@ -234,6 +234,7 @@ typedef struct
     uint8_t enablePorInBor; /*!< Enable POR when BOR occure or not */
 } HBN_BOR_CFG_Type;
 
+#ifdef TODO
 /**
  *  @brief HBN APP configuration type definition
  */
@@ -247,6 +248,7 @@ typedef struct
     HBN_LEVEL_Type hbnLevel;                /*!< HBN level */
     HBN_LDO_LEVEL_Type ldoLevel;            /*!< LDO level */
 } HBN_APP_CFG_Type;
+#endif  //  TODO
 
 /*@} end of group HBN_Public_Types */
 

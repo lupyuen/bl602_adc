@@ -549,7 +549,6 @@ typedef struct
 
 /*@} end of group GLB_Public_Macros */
 
-#ifdef TODO
 /** @defgroup  GLB_Public_Functions
  *  @{
  */
@@ -574,7 +573,9 @@ BL_Err_Type GLB_Set_WiFi_Encrypt_CLK(uint8_t clkDiv);
 BL_Err_Type GLB_Set_DMA_CLK(uint8_t enable, GLB_DMA_CLK_ID_Type clk);
 BL_Err_Type GLB_Set_IR_CLK(uint8_t enable, GLB_IR_CLK_SRC_Type clkSel, uint8_t div);
 BL_Err_Type GLB_Set_SF_CLK(uint8_t enable, GLB_SFLASH_CLK_Type clkSel, uint8_t div);
+#ifdef TODO
 BL_Err_Type GLB_Set_UART_CLK(uint8_t enable, HBN_UART_CLK_Type clkSel, uint8_t div);
+#endif  //  TODO
 BL_Err_Type GLB_Set_I2C_CLK(uint8_t enable, uint8_t div);
 BL_Err_Type GLB_Set_SPI_CLK(uint8_t enable, uint8_t div);
 /*----------*/
@@ -631,11 +632,14 @@ BL_Err_Type GLB_Set_BT_Coex_Signal(uint8_t enable, GLB_BT_BANDWIDTH_Type bandWid
 /*----------*/
 BL_Err_Type GLB_UART_Fun_Sel(GLB_UART_SIG_Type sig, GLB_UART_SIG_FUN_Type fun);
 /*----------*/
+#ifdef TODO
 BL_Err_Type GLB_IR_RX_GPIO_Sel(GLB_GPIO_Type gpio);
+#endif  //  TODO
 BL_Err_Type GLB_IR_LED_Driver_Enable(void);
 BL_Err_Type GLB_IR_LED_Driver_Disable(void);
 BL_Err_Type GLB_IR_LED_Driver_Ibias(uint8_t ibias);
 /*----------*/
+#ifdef TODO
 BL_Err_Type GLB_GPIO_Init(GLB_GPIO_Cfg_Type *cfg);
 BL_Err_Type GLB_GPIO_Func_Init(GLB_GPIO_FUNC_Type gpioFun, GLB_GPIO_Type *pinList, uint8_t cnt);
 BL_Err_Type GLB_GPIO_INPUT_Enable(GLB_GPIO_Type gpioPin);
@@ -658,9 +662,9 @@ BL_Err_Type GLB_Set_GPIO_IntMod(GLB_GPIO_Type gpioPin, GLB_GPIO_INT_CONTROL_Type
 GLB_GPIO_INT_CONTROL_Type GLB_Get_GPIO_IntCtlMod(GLB_GPIO_Type gpioPin);
 BL_Err_Type GLB_GPIO_INT0_IRQHandler_Install(void);
 BL_Err_Type GLB_GPIO_INT0_Callback_Install(GLB_GPIO_Type gpioPin, intCallback_Type *cbFun);
+#endif  //  TODO
 
 /*@} end of group GLB_Public_Functions */
-#endif  //  TODO
 
 /*@} end of group GLB */
 

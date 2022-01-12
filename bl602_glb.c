@@ -270,6 +270,7 @@ BL_Err_Type ATTR_CLOCK_SECTION Update_SystemCoreClockWith_XTAL(GLB_PLL_XTAL_Type
 }
 #endif
 
+#ifdef TODO
 /****************************************************************************/ /**
  * @brief  Set System clock
  *
@@ -380,7 +381,9 @@ BL_Err_Type ATTR_CLOCK_SECTION GLB_Set_System_CLK(GLB_PLL_XTAL_Type xtalType, GL
     return SUCCESS;
 }
 #endif
+#endif  //  TODO
 
+#ifdef TODO
 /****************************************************************************/ /**
  * @brief  This is demo for user that use RC32M as default bootup clock instead of PLL,when APP is
  *         started, this function can be called to set PLL to 160M
@@ -415,6 +418,7 @@ BL_Err_Type ATTR_CLOCK_SECTION System_Core_Clock_Update_From_RC32M(void)
     return SUCCESS;
 }
 #endif
+#endif  //  TODO
 
 /****************************************************************************/ /**
  * @brief  set BLE clock
@@ -546,6 +550,7 @@ BL_Err_Type GLB_Set_IR_CLK(uint8_t enable, GLB_IR_CLK_SRC_Type clkSel, uint8_t d
     return SUCCESS;
 }
 
+#ifdef TODO
 /****************************************************************************/ /**
  * @brief  set sflash clock
  *
@@ -627,7 +632,9 @@ BL_Err_Type ATTR_CLOCK_SECTION GLB_Set_SF_CLK(uint8_t enable, GLB_SFLASH_CLK_Typ
     return SUCCESS;
 }
 #endif
+#endif  //  TODO
 
+#ifdef TODO
 /****************************************************************************/ /**
  * @brief  Set UART clock
  *
@@ -671,6 +678,7 @@ BL_Err_Type GLB_Set_UART_CLK(uint8_t enable, HBN_UART_CLK_Type clkSel, uint8_t d
 
     return SUCCESS;
 }
+#endif  //  TODO
 
 /****************************************************************************/ /**
  * @brief  set I2C clock
@@ -758,6 +766,7 @@ BL_Err_Type ATTR_CLOCK_SECTION GLB_Set_PKA_CLK_Sel(GLB_PKA_CLK_Type clkSel)
 }
 #endif
 
+#ifdef TODO
 /****************************************************************************/ /**
  * @brief  Software system reset
  *
@@ -813,7 +822,9 @@ BL_Err_Type ATTR_TCM_SECTION GLB_SW_System_Reset(void)
     return SUCCESS;
 }
 #endif
+#endif  //  TODO
 
+#ifdef TODO
 /****************************************************************************/ /**
  * @brief  Software CPU reset
  *
@@ -869,7 +880,9 @@ BL_Err_Type ATTR_TCM_SECTION GLB_SW_CPU_Reset(void)
     return SUCCESS;
 }
 #endif
+#endif  //  TODO
 
+#ifdef TODO
 /****************************************************************************/ /**
  * @brief  Software power on reset
  *
@@ -925,6 +938,7 @@ BL_Err_Type ATTR_TCM_SECTION GLB_SW_POR_Reset(void)
     return SUCCESS;
 }
 #endif
+#endif  //  TODO
 
 /****************************************************************************/ /**
  * @brief  Reset slave 1
@@ -988,6 +1002,7 @@ BL_Err_Type GLB_AHB_Slave1_Clock_Gate(uint8_t enable, BL_AHB_Slave1_Type slave1)
     return SUCCESS;
 }
 
+#ifdef TODO
 /****************************************************************************/ /**
  * @brief  BMX init
  *
@@ -1015,6 +1030,7 @@ BL_Err_Type GLB_BMX_Init(BMX_Cfg_Type *BmxCfg)
 
     return SUCCESS;
 }
+#endif  //  TODO
 
 /****************************************************************************/ /**
  * @brief  BMX address monitor enable
@@ -1825,7 +1841,7 @@ BL_Err_Type GLB_UART_Fun_Sel(GLB_UART_SIG_Type sig, GLB_UART_SIG_FUN_Type fun)
 
     return SUCCESS;
 }
-
+#ifdef TODO
 /****************************************************************************/ /**
  * @brief  Select ir rx gpio (gpio11~gpio13)
  *
@@ -1854,6 +1870,7 @@ BL_Err_Type GLB_IR_RX_GPIO_Sel(GLB_GPIO_Type gpio)
 
     return SUCCESS;
 }
+#endif  //  TODO
 
 /****************************************************************************/ /**
  * @brief  Enable ir led driver
@@ -1915,6 +1932,7 @@ BL_Err_Type GLB_IR_LED_Driver_Ibias(uint8_t ibias)
     return SUCCESS;
 }
 
+#ifdef TODO
 /****************************************************************************/ /**
  * @brief  GPIO initialization
  *
@@ -2611,6 +2629,7 @@ void GPIO_INT0_IRQHandler(void)
     }
 }
 #endif
+#endif  //  TODO
 
 /*@} end of group GLB_Public_Functions */
 
