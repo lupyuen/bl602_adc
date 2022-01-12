@@ -13,6 +13,8 @@ Next update the Makefiles and Kconfig...
 
     Change "__sx1262__" to "__bl602_adc__", preserve case
 
+-   [See the modified Makefiles and Kconfig](https://github.com/lupyuen/incubator-nuttx/commit/cbe6be8ca58407ec4a124348dd19c4986a60335e)
+
 Then update the NuttX Build Config...
 
 ```bash
