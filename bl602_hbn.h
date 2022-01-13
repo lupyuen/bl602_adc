@@ -36,9 +36,11 @@
 #ifndef __BL602_HBN_H__
 #define __BL602_HBN_H__
 
-////TODO: #include "hbn_reg.h"
-////TODO: #include "bl602_aon.h"
-////TODO: #include "bl602_sflash.h"
+#ifndef __NuttX__
+#include "hbn_reg.h"
+#include "bl602_aon.h"
+#include "bl602_sflash.h"
+#endif  //  !__NuttX__
 #include "bl602_common.h"
 
 /** @addtogroup  BL602_Peripheral_Driver
@@ -234,7 +236,7 @@ typedef struct
     uint8_t enablePorInBor; /*!< Enable POR when BOR occure or not */
 } HBN_BOR_CFG_Type;
 
-#ifdef TODO
+#ifndef __NuttX__
 /**
  *  @brief HBN APP configuration type definition
  */
@@ -248,7 +250,7 @@ typedef struct
     HBN_LEVEL_Type hbnLevel;                /*!< HBN level */
     HBN_LDO_LEVEL_Type ldoLevel;            /*!< LDO level */
 } HBN_APP_CFG_Type;
-#endif  //  TODO
+#endif  //  !__NuttX__
 
 /*@} end of group HBN_Public_Types */
 
@@ -403,7 +405,7 @@ typedef struct
 
 /*@} end of group HBN_Public_Macros */
 
-#ifdef TODO
+#ifndef __NuttX__
 /** @defgroup  HBN_Public_Functions
  *  @{
  */
@@ -494,7 +496,7 @@ BL_Err_Type HBN_Set_Embedded_Flash_Pullup(uint8_t enable);
 BL_Err_Type HBN_Set_BOR_Cfg(HBN_BOR_CFG_Type *cfg);
 
 /*@} end of group HBN_Public_Functions */
-#endif  //  TODO
+#endif  //  !__NuttX__
 
 /*@} end of group HBN */
 

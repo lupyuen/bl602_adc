@@ -246,6 +246,8 @@ typedef enum {
   * @}
   */
 #include <stdint.h>
-////TODO: #include <system_bl602.h>
+#ifndef __NuttX__
+#include <system_bl602.h>
+#endif  //  !__NuttX__
 
 #endif
