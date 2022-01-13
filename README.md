@@ -12,6 +12,8 @@ To test the BL602 ADC Library, run this NuttX App...
 
 -   [lupyuen/bl602_adc_test](https://github.com/lupyuen/bl602_adc_test)
 
+# Install Library
+
 To add this library to your NuttX project...
 
 ```bash
