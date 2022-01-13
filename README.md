@@ -6,6 +6,8 @@ This NuttX Library enables access to BL602's ADC and Internal Temperature Sensor
 
 As explained in [this Twitter Thread](https://twitter.com/MisterTechBlog/status/1481425041275617283).
 
+[(Note: This library is NOT the proper way to access ADC Hardware in NuttX. Hopefully someday we will have an ADC Driver for BL602 NuttX, then we can do away with this library)](https://www.linkedin.com/feed/update/urn:li:activity:6887353468663812096?commentUrn=urn%3Ali%3Acomment%3A%28activity%3A6887353468663812096%2C6887410260710055936%29&replyUrn=urn%3Ali%3Acomment%3A%28activity%3A6887353468663812096%2C6887411211546312704%29)
+
 To test the BL602 ADC Library, run this NuttX App...
 
 -   [lupyuen/bl602_adc_test](https://github.com/lupyuen/bl602_adc_test)
