@@ -1,6 +1,16 @@
 # BL602 ADC and Temperature Sensor Library for Apache NuttX OS
 
-To add this repo to your NuttX project...
+This NuttX Library enables access to BL602's ADC and Internal Temperature Sensor. The code was ported from BL602 MCU SDK's ADC / GLB / EFuse Standard Driver with minimal changes...
+
+-   [bl_mcu_sdk/drivers/bl602_driver/std_drv](https://github.com/bouffalolab/bl_mcu_sdk/blob/master/drivers/bl602_driver/std_drv)
+
+As explained in [this Twitter Thread](https://twitter.com/MisterTechBlog/status/1481425041275617283).
+
+To test the BL602 ADC Library, run this NuttX App...
+
+-   [lupyuen/bl602_adc_test](https://github.com/lupyuen/bl602_adc_test)
+
+To add this library to your NuttX project...
 
 ```bash
 cd nuttx/nuttx/libs
@@ -42,11 +52,3 @@ make menuconfig
 ```
 
 In menuconfig, enable the BL602 ADC Library under "Library Routines".
-
-To test the BL602 ADC Library, run this NuttX App...
-
--   [lupyuen/bl602_adc_test](https://github.com/lupyuen/bl602_adc_test)
-
-Based on the ADC Standard Driver from BL602 MCU SDK:
-
-https://github.com/bouffalolab/bl_mcu_sdk/blob/master/drivers/bl602_driver/std_drv
