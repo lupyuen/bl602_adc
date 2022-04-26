@@ -78,8 +78,10 @@
  */
 static intCallback_Type *glbBmxErrIntCbfArra[BMX_ERR_INT_ALL] = { NULL };
 static intCallback_Type *glbBmxToIntCbfArra[BMX_TO_INT_ALL] = { NULL };
+#ifdef NOTUSED
 static intCallback_Type *glbGpioInt0CbfArra[GLB_GPIO_INT0_NUM] = { NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL,
                                                                    NULL, NULL, NULL, NULL, NULL, NULL, NULL };
+#endif  //  NOTUSED
 
 /*@} end of group GLB_Private_Variables */
 
@@ -1182,7 +1184,7 @@ void BMX_ERR_IRQHandler(void)
     }
 
     while (1) {
-        MSG("BMX_ERR_IRQHandler\r\n");
+        puts("BMX_ERR_IRQHandler\r\n");
         BL602_Delay_MS(1000);
     }
 }
@@ -1226,7 +1228,7 @@ void BMX_TO_IRQHandler(void)
     }
 
     while (1) {
-        MSG("BMX_TO_IRQHandler\r\n");
+        puts("BMX_TO_IRQHandler\r\n");
         BL602_Delay_MS(1000);
     }
 }
